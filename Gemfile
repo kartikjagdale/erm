@@ -51,3 +51,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Devise is a flexible authentication solution for Rails based on Warden
+gem 'devise', '~> 4.2.0'
+
+# Shim to load environment variables from .env into ENV in development.
+gem 'dotenv-rails', groups: [:development, :test]
