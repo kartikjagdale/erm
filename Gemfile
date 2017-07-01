@@ -60,3 +60,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # Faker to Fake Data
 gem 'faker'
+
+# For UI and template related
+#---------------------
+gem 'slim-rails', '3.1.2'
+#---------------------
