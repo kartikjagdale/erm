@@ -57,3 +57,6 @@ gem 'devise', '~> 4.2.0'
 
 # Shim to load environment variables from .env into ENV in development.
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Faker to Fake Data
+gem 'faker'
