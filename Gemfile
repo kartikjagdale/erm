@@ -65,3 +65,6 @@ gem 'faker'
 #---------------------
 gem 'slim-rails', '3.1.2'
 #---------------------
+
+# Jquery Datatables
+gem 'jquery-datatables-rails', '~> 3.4.0'
