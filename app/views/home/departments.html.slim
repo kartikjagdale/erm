@@ -1,5 +1,0 @@
-| Hi #{@employee.name}
-= form_tag home_change_department_path, method: 'post' do
-  = select_tag "department_id", options_from_collection_for_select(@departments, :id, :name),:prompt => "Select a Department"
-  = hidden_field_tag :employee_id, @employee.id 
-  = submit_tag "Submit"

@@ -12,5 +12,5 @@ table#employees
       tr
         td= emp.name
         td= emp.department_name
-        td= link_to "Edit Department", home_get_departments_path(employee_id: emp.id)
+        td= link_to "Edit Department", home_get_departments_path(employee_id: emp.id), remote: true, data: { toggle: "modal",target:'#myModal' }
       

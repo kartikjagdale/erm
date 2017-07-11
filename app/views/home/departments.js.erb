@@ -1,0 +1,2 @@
+$("#myModal").html("<%= escape_javascript(render partial: 'departments_modal', locals: { departments: @departments, employee: @employee } ) %>");
+$('#myModal').modal()

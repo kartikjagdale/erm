@@ -17,9 +17,8 @@ class HomeController < ApplicationController
   def get_departments
     @employee = Employee.find(params[:employee_id])
     @departments = Department.all
-
     respond_to do |format|
-      format.html {render "departments"}
+      format.js { render 'departments.js.erb' }
     end
   end
 
@@ -29,6 +28,6 @@ class HomeController < ApplicationController
     department = Department.find(params[:department_id])
     employee   = Employee.find(params[:employee_id])
     employee.update(department: department)
-    redirect_to home_index_path
+    redirect_to root_path
   end
 end
