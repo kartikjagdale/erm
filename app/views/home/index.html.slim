@@ -1,16 +1,16 @@
+- if user_signed_in?
+  li
+    = link_to('Logout', destroy_user_session_path, method: :delete)
+- else
+  li
+    = link_to('Login', new_user_session_path)
+
+= select_tag "manager_id", options_from_collection_for_select(@managers, :id, :name),:prompt => "Select a project", :onchange => "update_employees_div(this.value)"
+
 h1 
   | Employees
 
-table#employees
-  thead
-    tr
-      th
-        |Employee Name
-      th
-        |Edit Department
-  tbody
-    - @employees.each do |emp|
-      tr
-        td= emp.name
-        td
-          |Dummy Department
+#employeesDiv
+  = render :partial => 'employees', :object => @employees 
+
+

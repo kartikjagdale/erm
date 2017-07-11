@@ -15,3 +15,16 @@
 //= require dataTables/jquery.dataTables
 //= require turbolinks
 //= require_tree .
+
+function update_employees_div(manager_id) {  
+  jQuery.ajax({
+    url: "/home/retrive_employees_by_manager",
+    type: "GET",
+    data: {"manager_id" : manager_id},
+    dataType: "html",
+    success: function(data) {
+      jQuery("#employeesDiv").html(data);
+      jQuery('#employees').dataTable()
+    }
+  });
+}

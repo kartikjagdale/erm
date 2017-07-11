@@ -1,0 +1,14 @@
+table#employees
+  thead
+    tr
+      th
+        |Employee Name
+      th
+        |Edit Department
+  tbody
+    - @employees.each do |emp|
+      tr
+        td= emp.name
+        td
+          |Dummy Department
+
