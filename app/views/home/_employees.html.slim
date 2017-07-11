@@ -12,6 +12,5 @@ table#employees
       tr
         td= emp.name
         td= emp.department_name
-        td
-          | Edit 
+        td= link_to "Edit Department", home_get_departments_path(employee_id: emp.id)
       

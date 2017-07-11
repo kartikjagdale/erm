@@ -12,4 +12,23 @@ class HomeController < ApplicationController
                   .where(manager_id: params[:manager_id])
     render :partial => "employees", :object => @employees
   end
+
+  # @params => {employee_id: '1'}
+  def get_departments
+    @employee = Employee.find(params[:employee_id])
+    @departments = Department.all
+
+    respond_to do |format|
+      format.html {render "departments"}
+    end
+  end
+
+
+  # @params => {employee_id: '1', department_id: '1' }
+  def change_department
+    department = Department.find(params[:department_id])
+    employee   = Employee.find(params[:employee_id])
+    employee.update(department: department)
+    redirect_to home_index_path
+  end
 end
