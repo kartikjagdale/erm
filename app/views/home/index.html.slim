@@ -5,7 +5,7 @@
   li
     = link_to('Login', new_user_session_path)
 
-= select_tag "manager_id", options_from_collection_for_select(@managers, :id, :name),:prompt => "Select a project", :onchange => "update_employees_div(this.value)"
+= select_tag "manager_id", options_from_collection_for_select(@managers, :id, :name),:prompt => "Select a Manager", :onchange => "update_employees_div(this.value)"
 
 h1 
   | Employees

@@ -4,11 +4,14 @@ table#employees
       th
         |Employee Name
       th
-        |Edit Department
+        |Department Name
+      th
+        | Edit Department
   tbody
     - @employees.each do |emp|
       tr
         td= emp.name
+        td= emp.department_name
         td
-          |Dummy Department
-
+          | Edit 
+      

@@ -5,4 +5,8 @@ class Employee < ApplicationRecord
 
   # Validations
   validates :name, presence: true
+
+  def department_name
+    department.name
+  end
 end
