@@ -1,17 +1,11 @@
-- if user_signed_in?
-  li
-    = link_to('Logout', destroy_user_session_path, method: :delete)
-- else
-  li
-    = link_to('Login', new_user_session_path)
+.container
+  = select_tag "manager_id", options_from_collection_for_select(@managers, :id, :name),:prompt => "Select a Manager", :onchange => "update_employees_div(this.value)"
 
-= select_tag "manager_id", options_from_collection_for_select(@managers, :id, :name),:prompt => "Select a Manager", :onchange => "update_employees_div(this.value)"
+  h1 
+    | Employees
 
-h1 
-  | Employees
+  #employeesDiv
+    = render :partial => 'employees', :object => @employees 
 
-#employeesDiv
-  = render :partial => 'employees', :object => @employees 
-
-#myModal.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1" 
+  #myModal.modal.fade aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1" 
 

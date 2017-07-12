@@ -1,0 +1,7 @@
+- if user_signed_in?
+  nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        .navbar-brand  Employee Resource Management
+      ul.nav.navbar-nav.pull-right
+        li.active= link_to "Sign out", destroy_user_session_path, :method => :delete
