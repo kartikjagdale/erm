@@ -7,9 +7,14 @@ class HomeController < ApplicationController
   end
 
   def retrive_employees_by_manager
-    @employees = Employee
-                  .includes(:department)
-                  .where(manager_id: params[:manager_id])
+    @employees = 
+      if params[:manager_id].present?    
+        Employee.includes(:department)
+                .where(manager_id: params[:manager_id])
+      else
+        Employee.includes(:department).all
+      end
+
     render :partial => "employees", :object => @employees
   end
 

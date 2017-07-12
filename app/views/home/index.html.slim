@@ -1,5 +1,5 @@
 .container
-  = select_tag "manager_id", options_from_collection_for_select(@managers, :id, :name),:prompt => "Select a Manager", :onchange => "update_employees_div(this.value)"
+  = select_tag "manager_id", options_from_collection_for_select(@managers, :id, :name),:prompt => "Select a Manager", :onchange => "update_employees_div(this.value)", class: 'form-control'
 
   h1 
     | Employees
