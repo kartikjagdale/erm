@@ -40,7 +40,7 @@ email: admin@example.com
 password: 123456
 ```
 
-###Important Note:
+### Important Note:
 Make sure you have `.env` file in your root folder and have setup environment variables in it, specially for database
 ```sh
 ERM_DEV_DATABASE_PASSWORD='YourDatabasePassword'
