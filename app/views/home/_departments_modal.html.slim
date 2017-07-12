@@ -3,13 +3,18 @@
   .modal-content
     .modal-header
       button.close data-dismiss="modal" type="button"  &times;
-      h4.modal-title Modal Header
+      h4.modal-title Change Department
     .modal-body
-      | Hi #{employee.name}
+      h4
+        strong Hello 
+        strong
+          em #{employee.name}
       = form_tag home_change_department_path, method: 'post' do
-        = select_tag "department_id", options_from_collection_for_select(departments, :id, :name),:prompt => "Select a Department"
-        = hidden_field_tag :employee_id, @employee.id 
-        = submit_tag "Save changes", class: 'btn.btn-primary'
+        .form-group
+          = select_tag "department_id", options_from_collection_for_select(departments, :id, :name),:prompt => "Select a Department", class: 'form-control'
+          = hidden_field_tag :employee_id, @employee.id
+        .text-center
+          = submit_tag "Save changes", class: 'btn btn-primary'
     .modal-footer
       button.btn.btn-default data-dismiss="modal" type="button"  Close
 
