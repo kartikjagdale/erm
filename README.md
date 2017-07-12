@@ -33,7 +33,7 @@ $ rails db:seed
 $ rails server
 ```
 
- 1. Visit `127.0.0.1:3000` in your browser.
+ 1. Visit `localhost:3000` in your browser.
  2. Enter below admin `email` and `password` and hit `Enter`
 ```
 email: admin@example.com
